@@ -1,0 +1,22 @@
+# Render.com deployment configuration
+# This file tells Render how to build and run the app
+
+services:
+  - type: web
+    name: shopelite-api
+    env: node
+    buildCommand: cd frontend && npm install && npm run build && cd ../backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_PUBLISHABLE_KEY
+        sync: false
+      - key: CLIENT_URL
+        value: https://shopelite-api.onrender.com

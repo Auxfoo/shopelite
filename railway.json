@@ -1,0 +1,13 @@
+{
+    "schemaVersion": 2,
+    "buildType": "nixPacks",
+    "envVars": {
+        "NODE_ENV": "${NODE_ENV}",
+        "MONGO_URI": "${MONGO_URI}",
+        "JWT_SECRET": "${JWT_SECRET}",
+        "STRIPE_SECRET_KEY": "${STRIPE_SECRET_KEY}",
+        "CLIENT_URL": "${RAILWAY_PUBLIC_DOMAIN}"
+    },
+    "startCommand": "cd backend && npm start",
+    "buildCommand": "cd frontend && npm install && npm run build && cd ../backend && npm install"
+}
