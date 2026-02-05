@@ -118,9 +118,9 @@ const OrdersPage = () => {
                                         <span className="total-label">Total</span>
                                         <span className="total-amount">${order.totalPrice.toFixed(2)}</span>
                                     </div>
-                                    <button className="btn btn-secondary order-details-btn">
+                                    <Link to={`/orders/${order._id}`} className="btn btn-secondary order-details-btn">
                                         View Details <FiChevronRight />
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         ))}
