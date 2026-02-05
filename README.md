@@ -2,6 +2,8 @@
 
 A full-stack e-commerce platform built with React, Node.js, Express, MongoDB, and Stripe.
 
+🚀 **Live Demo**: [https://ara-ecom.up.railway.app](https://ara-ecom.up.railway.app)
+
 ## Features
 
 - 🔐 JWT Authentication
