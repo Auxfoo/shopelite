@@ -3,13 +3,13 @@
     "version": "1.0.0",
     "description": "ShopElite - Full-Stack E-Commerce Platform",
     "scripts": {
-        "start": "cd backend && npm start",
+        "start": "cd backend && npm install && npm start",
         "dev": "cd backend && npm run dev",
         "dev:frontend": "cd frontend && npm run dev",
-        "build": "cd frontend && npm install && npm run build",
+        "build": "cd frontend && npm install && npm run build && cd ../backend && npm install",
         "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
         "seed": "cd backend && node seed.js",
-        "heroku-postbuild": "cd frontend && npm install && npm run build"
+        "heroku-postbuild": "cd frontend && npm install && npm run build && cd ../backend && npm install"
     },
     "engines": {
         "node": ">=18.0.0"
